@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | No Man's Flappy</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <div class="game-panel">
+    <header>
+      <img src="images/3DTitle.png"/>
+    </header>
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="400px"></canvas>
+    </div>
+    <div class="ranking-panel">
+      <?php
+        //include "tabla-prueba.php";
+        
+      ?>
+    </div>
+    <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 268435456,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    dataUrl: "game/0.4.data",
+    codeUrl: "game/0.4.js",
+    memUrl: "game/0.4.mem",
+    
+  };
+</script>
+<script src="game/UnityLoader.js"></script>
+
+  </body>
+</html>

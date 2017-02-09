@@ -1,0 +1,351 @@
+body{
+	margin: 0;
+	padding: 0;
+
+	font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 3rem;
+	line-height: 2rem;
+	letter-spacing: 0.01rem;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+.site-header h1{
+	padding: 120px;
+}
+
+canvas{
+	border-radius: 20px;
+	height:100%;
+	width:100%;
+}
+
+
+div#canvas-container{
+	height: 80vh;
+	width: calc(80vh*0.67);
+	background-color: #121212;
+	border-radius: 23px;
+	margin-left: auto;
+	margin-right: auto;
+	user-select: none;
+
+	/*-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.55);
+	-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.55);
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.55);*/
+}
+
+@keyframes animatedBackground {
+	from { background-position: 100% 0; }
+	to { background-position: 0 0; }
+}
+
+#section1{
+	background-image: url(/images/clouds-black.jpg);
+	background-position: 0px 0px;
+	background-repeat: repeat;
+
+
+	animation: animatedBackground 80s linear infinite;
+}
+
+#section2{
+	background-color: #FFEE58;
+}
+
+.section{
+	text-align:center;
+}
+
+#ranking-table{
+	height:80%; 
+	overflow:auto;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 30px;
+	background-color: white;
+}
+
+#ranking-table .table{
+	margin-bottom: 0 !important;
+}
+
+#ranking-table td:first-child + td + td{
+	width: 8em;
+}
+
+#ranking-table td:first-child{
+	margin-left: 20px;
+}
+
+/* ELEMENTO INACTIVO */
+#ranking-table tr:first-child + tr + tr + tr{
+    color: #B0BEC5;
+    background: #ECEFF1;
+}
+
+caption { 
+	text-align: center;
+	background-color: white;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+
+	padding-left: 0;
+	padding-right: 0;
+
+	width:4em;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	text-shadow: 2px 1px 2px #828282;
+	font-size: 3rem;
+	line-height: 2rem;
+	letter-spacing: 0.01rem;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	color: #212121;
+	background-color:rgba(0, 0, 0, 0.1);
+	/*background-image: url(/images/clouds-yellow.jpg);*/
+	background-size: 50%;
+	border-radius: 4px;
+
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+/*.card {
+  background: #fff;
+  border-radius: 2px;
+  display: block;
+  height: 300px;
+  margin: 1rem;
+  position: relative;
+  width: 300px;
+}*/
+
+#section3{
+	background-color: #64B5F6;
+	/*padding: 10vh;*/
+}
+
+.circles-line{
+	width: 50%;
+	margin:auto;
+	padding: 10vh 50px 0 50px;
+	height: 40vh;
+}
+
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+.circle {
+  width: 12vw;
+  height: 12vw;
+  line-height: 200px;
+  border-radius: 50%; /* the magic */
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+
+  background-size: cover;
+
+  /*text-align: center;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 auto 40px;*/
+  transition: background-color 0.5s ease; 
+
+}
+
+#pvp{
+	background-image: url(/images/pvp-icon-no-bg.png);
+	background-color: #ef5350;
+}
+
+#pve{
+	background-image: url(/images/pve-icon-no-bg.png);
+	background-color: #26A69A; 
+}
+
+#guilds{
+	background-image: url(/images/guilds-icon-no-bg.png);
+	background-color: #42A5F5; 
+}
+
+#leagues{
+	background-image: url(/images/leagues-icon-no-bg.png);
+	background-color: #8D6E63; 
+}
+
+/*.footer{
+	height: 300px;
+	background: black;
+}*/
+
+/*.footer h1,
+.footer p,
+.footer img{
+	padding-top: 150px;
+}*/
+
+.game-icon{
+	height: 30%;
+    	margin: 40px 0 20px 0;
+    	border-radius: 6px;
+}
+
+.footer p{
+	color: white;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+/* Site Footer
+---------------------------------------------------------------------------------------------------- */
+
+.site-footer a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="submit"],
+textarea:focus,
+.button {
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition:    all 0.2s ease-in-out;
+	-ms-transition:     all 0.2s ease-in-out;
+	-o-transition:      all 0.2s ease-in-out;
+	transition:         all 0.2s ease-in-out;
+}
+
+
+
+.site-footer {
+	background-color: #000;
+	bottom: 0;
+	display: table;
+	left: 0;
+	height: 300px;
+	line-height: 1;
+	right: 0;
+	text-align: center;
+	width: 100%;
+	z-index: -99;
+}
+
+.site-footer .widget-area {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.site-footer a,
+.site-footer p {
+	color: #fff;
+}
+
+.site-footer a:hover {
+	color: #ccc;
+}
+
+.site-footer p {
+	font-size: 15px;
+	margin-bottom: 20px;
+}
+
+.site-footer p:last-child {
+	margin-bottom: 0;
+}
+
+.site-logo > a {
+	background: url(/images/game-icon.png) no-repeat center center;
+	background-size: 80px;
+	display: block;
+	padding: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.site-footer .site-logo {
+	display: block;
+	/*margin-right: auto;
+	margin-left: auto;*/
+	text-indent: -9999px;
+	/*height: 30%;*/
+    	margin: 40px 0 20px 0;
+}
+.site-footer .powered,
+.site-footer .social-links {
+	/*font-family: 'acumin-pro-condensed', sans-serif;*/
+	font-weight: 500;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+}
+
+.site-footer .powered {
+	font-weight: 300 !important;
+	font-size: 14px;
+	margin-bottom: 60px;
+}
+
+.site-footer .ion-heart {
+	font-size: 11px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.site-footer .social-links {
+	color: #999;
+	font-size: 12px;
+}
+
+
+.loading:after {
+	border-width: 0 3px 0 0;
+	border-style: solid;
+	border-color: rgba(0, 0, 0, .5);
+	border-radius: 50%;
+	display: block;
+	height: 50px;
+	left: 50%;
+	margin: -25px 0 0 -25px;
+	position: absolute;
+	top: 50%;
+	width: 50px;
+
+	content: "";
+
+	animation: spin 1s infinite linear;
+	-webkit-animation: spin 1s infinite linear;
+}
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+	from { -webkit-transform: rotate(0deg); }
+	to { -webkit-transform: rotate(360deg); }
+}
