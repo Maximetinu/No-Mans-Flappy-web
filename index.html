@@ -2,349 +2,350 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>No Man's Flappy</title>
-    <meta name="author" content="Maximetinu" />
-    <meta name="description" content="A project from limpopopó games" />
-    <meta name="keywords"  content="game,unity,maximetinu,videogame,chat,mmo,nomansflappy" />
-    <meta name="Resource-type" content="Document" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>No Man's Flappy</title>
+	<meta name="author" content="Maximetinu" />
+	<meta name="description" content="A project from limpopopó games" />
+	<meta name="keywords"  content="game,unity,maximetinu,videogame,chat,mmo,nomansflappy" />
+	<meta name="Resource-type" content="Document" />
 
 
-    <link rel="stylesheet" type="text/css" href="css/loading.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-    <link rel="stylesheet" type="text/css" href="css/examples.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/ranking.css" />
-    <link rel="stylesheet" type="text/css" href="css/tooltip.css" />
-    <link rel='stylesheet' type='text/css' href='//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css?ver=1.0' media='all' />
+	<link rel="stylesheet" type="text/css" href="css/loading.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/ranking.css" />
+	<link rel="stylesheet" type="text/css" href="css/tooltip.css" />
+	<link rel='stylesheet' type='text/css' href='//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css?ver=1.0' media='all' />
 
     <!--[if IE]>
         <script type="text/javascript">
              var console = { log: function() {} };
         </script>
-    <![endif]-->
+        <![endif]-->
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-    <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
-    <script type="text/javascript" src="js/examples.js"></script>
-    <script type="text/javascript" src="js/ranking.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#fullpage').fullpage({
-              verticalCentered: true,
+        <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+        <script type="text/javascript" src="js/examples.js"></script>
+        <script type="text/javascript" src="js/ranking.js"></script>
+        <script type="text/javascript">
+        	$(document).ready(function() {
+        		$('#fullpage').fullpage({
+        			verticalCentered: true,
               //sectionsColor: ['#1bbc9b', '#4BBFC3', '#4BAABE', 'whitesmoke', '#ccddff'],
-              anchors: ['header','game', 'ranking', 'more','chat','footer'],
+              anchors: ['game', 'ranking', 'more','chat','footer'],
               menu: '#menu',
               normalScrollElements: '.scrollable-element',
               navigation: true,
+              navigationTooltips: ['Game', 'Ranking', 'More','Chat'],
               animateAnchor:false,
               //verticalCentered: false,
               //css3:false
-            });
-            $.fn.fullpage.setKeyboardScrolling(false);
+          });
+        		$.fn.fullpage.setKeyboardScrolling(false);
             /*$.fn.fullpage.setMouseWheelScrolling(false);
             $.fn.fullpage.setAllowScrolling(false);*/
         });
     </script>
 </head>
 <body>
-<ul id="menu">
-    <li data-menuanchor="header" class="active"><a href="#header">&ltH1&gt</a></li>
+<!--ul id="menu">
+    <li data-menuanchor="header" class="active"><a href="#header">&lt&nbsp&gt</a></li>
     <li data-menuanchor="game"><a href="#game">Game</a></li>
     <li data-menuanchor="ranking"><a href="#ranking">Ranking</a></li>
     <li data-menuanchor="more"><a href="#more">More</a></li>
     <li data-menuanchor="chat"><a href="#chat">Chat</a></li>
     <li data-menuanchor="footer"><a href="#footer">&lt/&gt</a></li>
-</ul>
+</ul-->
 
 <div id="fullpage">
-    <div class="section fp-auto-height site-header" id="section0">
-        <h1>header</h1>
-    </div>
-    <div class="section " id="section1">
-        <div id="canvas-container" class="shadow-z-1">
-            <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
-            <div id="load-animation" class="loading"></div>
-        </div>
-    </div>
-    <div class="section" id="section2">
-        <div id="ranking-table" class="scrollable-element table-responsive-vertical shadow-z-1">
-            <!-- Table starts here -->
-            <table id="table" class="table table-mc-light-blue">
-                <caption tooltip="This is the community score. When all of you reach the target together, gamemode B will unlock" flow="right" >34/200</caption>
-                <thead>
-                  <tr>
-                    <th>Position</th>
-                    <th>Name</th>
-                    <th>Score</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td data-title="Position">1</td>
-                    <td data-title="Name">Richar</td>
-                    <td data-title="Score">
-                      5
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">2</td>
-                    <td data-title="Name">Maria daniela</td>
-                    <td data-title="Score">
-                      5
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">3</td>
-                    <td data-title="Name">Lucas</td>
-                    <td data-title="Score">
-                      5
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">4</td>
-                    <td data-title="Name">Zacarias</td>
-                    <td data-title="Score">5</td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">5</td>
-                    <td data-title="Name">kkak Tiles</td>
-                    <td data-title="Score">
-                      5
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">6</td>
-                    <td data-title="Name">Subnor</td>
-                    <td data-title="Score">
-                      5
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">4</td>
-                    <td data-title="Name">Lifka Buttons</td>
-                    <td data-title="Score">
-                      5
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">8</td>
-                    <td data-title="Name">Hitler</td>
-                    <td data-title="Score">
-                      5
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">9</td>
-                    <td data-title="Name">Sudo </td>
-                    <td data-title="Score">
-                      5
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">10</td>
-                    <td data-title="Name">Canario</td>
-                    <td data-title="Score">
-                     5
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">11</td>
-                    <td data-title="Name">CaSimple</td>
-                    <td data-title="Score">
-                      5
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">12</td>
-                    <td data-title="Name">Bichow</td>
-                    <td data-title="Score">
-                      5
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">13</td>
-                    <td data-title="Name">slulllll</td>
-                    <td data-title="Score">6
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">14</td>
-                    <td data-title="Name">Skulll69</td>
-                    <td data-title="Score">4</td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">15</td>
-                    <td data-title="Name">fofjoiw409 Tiles</td>
-                    <td data-title="Score">
-                      45
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">16</td>
-                    <td data-title="Name">vengamonjjajs</td>
-                    <td data-title="Score">
-                      783
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">14</td>
-                    <td data-title="Name">Vapi Buttons</td>
-                    <td data-title="Score">
-                      41
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">18</td>
-                    <td data-title="Name">Sephiroth</td>
-                    <td data-title="Score">
-                      66
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">19</td>
-                    <td data-title="Name">Cloud </td>
-                    <td data-title="Score">
-                      3
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">20</td>
-                    <td data-title="Name">CloudaEstefano</td>
-                    <td data-title="Score">
-                      1
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">21</td>
-                    <td data-title="Name">Enrico</td>
-                    <td data-title="Score">
-                      5
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">22</td>
-                    <td data-title="Name">Enrico el rico</td>
-                    <td data-title="Score">
-                      4
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">23</td>
-                    <td data-title="Name">Metinulachupa</td>
-                    <td data-title="Score">
-                      6
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">24</td>
-                    <td data-title="Name">Mecagoentete</td>
-                    <td data-title="Score">4</td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">25</td>
-                    <td data-title="Name">suplente Tiles</td>
-                    <td data-title="Score">
-                      45
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">26</td>
-                    <td data-title="Name">oloalla</td>
-                    <td data-title="Score">
-                      783
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">24</td>
-                    <td data-title="Name">olakase Buttons</td>
-                    <td data-title="Score">
-                      41
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">28</td>
-                    <td data-title="Name">soylallama</td>
-                    <td data-title="Score">
-                      66
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">29</td>
-                    <td data-title="Name">supermant </td>
-                    <td data-title="Score">
-                      3
-                    </td>
-                    
-                  </tr>
-                  <tr>
-                    <td data-title="Position">30</td>
-                    <td data-title="Name">yea</td>
-                    <td data-title="Score">
-                      34
-                    </td>
-                    
-                  </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="section" id="section3">
-        <div class="circles-line">
-            <div id="pvp" tooltip="Lorem ipsum sil amet lorem ipsum sit amet amet lorem ipsus impusm impusm sit amet amtet lorem ipsum sit amet" flow="left" class="circle left shadow-z-1 "></div>
-            <div id="pve" tooltip="Lorem ipsum sil amet lorem ipsum sit amet amet lorem ipsus impusm impusm sit amet amtet lorem ipsum sit amet" flow="right" class="circle right shadow-z-1"></div>
-        </div>
-        <div class="circles-line">
-            <div id="guilds" tooltip="Lorem ipsum sil amet lorem ipsum sit amet amet lorem ipsus impusm impusm sit amet amtet lorem ipsum sit amet" flow="left" class="circle left shadow-z-1"></div>
-            <div id="leagues" tooltip="Lorem ipsum sil amet lorem ipsum sit amet amet lorem ipsus impusm impusm sit amet amtet lorem ipsum sit amet" flow="right" class="circle right shadow-z-1"></div>
-        </div>
-    </div>
-    <div class="section" id="section4">
-        <h1>Here should go the chat</h1>
-    </div>
-    <div class="section fp-auto-height" id="section5">
-        <div class="site-footer">
-            <p class="site-logo"><a href="http://www.maximetinu.com/">No Man's Flappy</a></p> 
-            <p class="powered">Powered by Maximetinu</p>
-            <p class="site-credits"><span class="love">Handcrafted with <i class="icon ion-heart"></i> in Florence</span> <span class="middot"> &middot; </span> <span class="site-links"><a href="#">Copyrrright</a> · <a href="http://maximetinu.com/contact/">Get in touch</a></span></p>
-            <p class="social-links"><a href="http://www.facebook.com/maximetinu">Facebook</a> <span class="line"> — </span> <a href="http://twitter.com/maximetinu">Twitter</a> <span class="line"> — </span> <a href="http://www.instagram.com/maximetinu">Instagram</a></p>
-        </div>
-    </div>
+	<!--div class="section fp-auto-height site-header" id="section0">
+		<h1>header</h1>
+	</div-->
+	<div class="section " id="section0">
+		<div id="canvas-container" class="shadow-z-1">
+			<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+			<div id="load-animation" class="loading"></div>
+		</div>
+	</div>
+	<div class="section" id="section1">
+		<div id="ranking-table" class="scrollbar style-1 scrollable-element table-responsive-vertical shadow-z-1">
+			<!-- Table starts here -->
+			<table id="table" class="table table-mc-light-blue">
+				<caption tooltip="This is the community score. When all of you reach the target together, gamemode B will unlock" flow="right" >34/200</caption>
+				<thead>
+					<tr>
+						<th>Position</th>
+						<th>Name</th>
+						<th>Score</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td data-title="Position">1</td>
+						<td data-title="Name">Richar</td>
+						<td data-title="Score">
+							5
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">2</td>
+						<td data-title="Name">Maria daniela</td>
+						<td data-title="Score">
+							5
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">3</td>
+						<td data-title="Name">Lucas</td>
+						<td data-title="Score">
+							5
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">4</td>
+						<td data-title="Name">Zacarias</td>
+						<td data-title="Score">5</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">5</td>
+						<td data-title="Name">kkak Tiles</td>
+						<td data-title="Score">
+							5
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">6</td>
+						<td data-title="Name">Subnor</td>
+						<td data-title="Score">
+							5
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">4</td>
+						<td data-title="Name">Lifka Buttons</td>
+						<td data-title="Score">
+							5
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">8</td>
+						<td data-title="Name">Hitler</td>
+						<td data-title="Score">
+							5
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">9</td>
+						<td data-title="Name">Sudo </td>
+						<td data-title="Score">
+							5
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">10</td>
+						<td data-title="Name">Canario</td>
+						<td data-title="Score">
+							5
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">11</td>
+						<td data-title="Name">CaSimple</td>
+						<td data-title="Score">
+							5
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">12</td>
+						<td data-title="Name">Bichow</td>
+						<td data-title="Score">
+							5
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">13</td>
+						<td data-title="Name">slulllll</td>
+						<td data-title="Score">6
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">14</td>
+						<td data-title="Name">Skulll69</td>
+						<td data-title="Score">4</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">15</td>
+						<td data-title="Name">fofjoiw409 Tiles</td>
+						<td data-title="Score">
+							45
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">16</td>
+						<td data-title="Name">vengamonjjajs</td>
+						<td data-title="Score">
+							783
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">14</td>
+						<td data-title="Name">Vapi Buttons</td>
+						<td data-title="Score">
+							41
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">18</td>
+						<td data-title="Name">Sephiroth</td>
+						<td data-title="Score">
+							66
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">19</td>
+						<td data-title="Name">Cloud </td>
+						<td data-title="Score">
+							3
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">20</td>
+						<td data-title="Name">CloudaEstefano</td>
+						<td data-title="Score">
+							1
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">21</td>
+						<td data-title="Name">Enrico</td>
+						<td data-title="Score">
+							5
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">22</td>
+						<td data-title="Name">Enrico el rico</td>
+						<td data-title="Score">
+							4
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">23</td>
+						<td data-title="Name">Metinulachupa</td>
+						<td data-title="Score">
+							6
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">24</td>
+						<td data-title="Name">Mecagoentete</td>
+						<td data-title="Score">4</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">25</td>
+						<td data-title="Name">suplente Tiles</td>
+						<td data-title="Score">
+							45
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">26</td>
+						<td data-title="Name">oloalla</td>
+						<td data-title="Score">
+							783
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">24</td>
+						<td data-title="Name">olakase Buttons</td>
+						<td data-title="Score">
+							41
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">28</td>
+						<td data-title="Name">soylallama</td>
+						<td data-title="Score">
+							66
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">29</td>
+						<td data-title="Name">supermant </td>
+						<td data-title="Score">
+							3
+						</td>
+
+					</tr>
+					<tr>
+						<td data-title="Position">30</td>
+						<td data-title="Name">yea</td>
+						<td data-title="Score">
+							34
+						</td>
+
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="circles-line">
+			<div id="pvp" tooltip="Lorem ipsum sil amet lorem ipsum sit amet amet lorem ipsus impusm impusm sit amet amtet lorem ipsum sit amet" flow="left" class="circle left shadow-z-1 "></div>
+			<div id="pve" tooltip="Lorem ipsum sil amet lorem ipsum sit amet amet lorem ipsus impusm impusm sit amet amtet lorem ipsum sit amet" flow="right" class="circle right shadow-z-1"></div>
+		</div>
+		<div class="circles-line">
+			<div id="guilds" tooltip="Lorem ipsum sil amet lorem ipsum sit amet amet lorem ipsus impusm impusm sit amet amtet lorem ipsum sit amet" flow="left" class="circle left shadow-z-1"></div>
+			<div id="leagues" tooltip="Lorem ipsum sil amet lorem ipsum sit amet amet lorem ipsus impusm impusm sit amet amtet lorem ipsum sit amet" flow="right" class="circle right shadow-z-1"></div>
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<h1>Here should go the chat</h1>
+	</div>
+	<div class="section fp-auto-height" id="section4">
+		<div class="site-footer">
+			<p class="site-logo"><!--a href="http://www.maximetinu.com/">No Man's Flappy</a--></p> 
+			<!--p class="powered">Powered by Maximetinu</p-->
+			<p class="site-credits"><span class="love">Handcrafted with <i class="icon ion-heart"></i> in Florence</span> <span class="middot"> &middot; </span> <span class="site-links"><a href="#">Copyrrright</a> · <a href="http://maximetinu.com/contact/">Get in touch</a></span></p>
+			<p class="social-links"><a href="http://www.facebook.com/maximetinu">Facebook</a> <span class="line"> — </span> <a href="http://twitter.com/maximetinu">Twitter</a> <span class="line"> — </span> <a href="http://lanaciondelcosmopolita.tumblr.com/">Tumblr</a></p>
+		</div>
+	</div>
 </div>
 
-<script type='text/javascript'>
-  var Module = {
-  TOTAL_MEMORY: 268435456,
+<!--script type='text/javascript'>
+	var Module = {
+		TOTAL_MEMORY: 268435456,
   errorhandler: null,     // arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
   compatibilitycheck: null,
   dataUrl: "game/0.4.data",
@@ -352,7 +353,7 @@
   memUrl: "game/0.4.mem",
 };
 </script>
-<script src="game/UnityLoader.js"></script>
+<script src="game/UnityLoader.js"></script-->
 <!--script>
     var pageURL = $(location).attr("href");
     var time_to_wait = 7000;
