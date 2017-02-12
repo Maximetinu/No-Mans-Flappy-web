@@ -24,7 +24,8 @@
   content: attr(tooltip); /* magic! */
   
   /* most of the rest of this is opinion */
-  font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  /*font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;*/
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 1.5rem;

@@ -2,7 +2,8 @@ body{
 	margin: 0;
 	padding: 0;
 
-	font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+	/*font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;*/
+	font-family: 'Roboto', sans-serif;
 	font-style: normal;
 	font-weight: 300;
 	font-size: 3rem;
@@ -12,6 +13,28 @@ body{
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 }
+::selection {
+  background: #FFFF00; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #FFFF00; /* Gecko Browsers */
+}
+
+.disable-anchor{
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
+div#loader-wrapper{
+	opacity: 1.0;
+}
+
+/*#fullpage {
+    margin: 0 auto;
+    padding-bottom: 50px;
+    width: 80%;
+    max-width: 978px;
+}*/
 
 .site-header h1{
 	padding: 120px;
@@ -22,7 +45,6 @@ canvas{
 	height:100%;
 	width:100%;
 }
-
 
 div#canvas-container{
 	height: 80vh;
@@ -62,12 +84,16 @@ div#canvas-container{
 	background-color: #FFEE58;
 }
 
+#section3{
+	background-color: #EEEEEE;
+}
+
 .section{
 	text-align:center;
 }
 
 #ranking-table{
-	height:80%; 
+	height:80vh; 
 	overflow:auto;
 	width: 50%;
 	margin-left: auto;
@@ -111,9 +137,10 @@ caption {
 	margin-top: 20px;
 	margin-bottom: 20px;
 
-	font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+	/*font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;*/
+	font-family: 'Roboto', sans-serif;
 	font-style: normal;
-	font-weight: 300;
+	font-weight: 500;
 	/*text-shadow: 2px 1px 2px #828282;*/
 	text-shadow: 1px 3px 0 rgba(0, 0, 0, 0.12), 1px 2px 0 rgba(0, 0, 0, 0.24);
 	font-size: 3rem;
@@ -122,7 +149,7 @@ caption {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
-	color: #212121;
+	color: #393939;
 	background-color:rgba(0, 0, 0, 0.1);
 	/*background-image: url(/images/clouds-yellow.jpg);*/
 	background-size: 50%;
@@ -232,9 +259,10 @@ caption {
 	text-shadow: 1px 3px 0 rgba(0, 0, 0, 0.12), 1px 2px 0 rgba(0, 0, 0, 0.24);
 
 	text-transform: uppercase;
-	font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+	/*font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;*/
+	font-family: 'Roboto', sans-serif;
 	font-style: normal;
-	font-weight: 100;
+	font-weight: 500;
 
 	line-height: 2rem;
 	letter-spacing: 0.3rem;
@@ -287,6 +315,10 @@ a.active:first-of-type + div{
 
 /* Site Footer
 ---------------------------------------------------------------------------------------------------- */
+
+#contact-on{
+	display: none;
+}
 
 .site-footer a:hover {
 	color: white;
@@ -393,30 +425,73 @@ textarea:focus,
 	font-size: 12px;
 }
 
-
-.loading:after {
-	border-width: 0 3px 0 0;
-	border-style: solid;
-	border-color: rgba(0, 0, 0, .5);
-	border-radius: 50%;
-	display: block;
-	height: 50px;
-	left: 50%;
-	margin: -25px 0 0 -25px;
-	position: absolute;
-	top: 50%;
-	width: 50px;
-
-	content: "";
-
-	animation: spin 1s infinite linear;
-	-webkit-animation: spin 1s infinite linear;
+.site-credits{
+	font-weight: 300 !important;
 }
-@keyframes spin {
-	from { transform: rotate(0deg); }
-	to { transform: rotate(360deg); }
+
+.site-credits,
+.social-links{
+	text-shadow: 1px 3px 0 rgba(0, 0, 0, 0.12), 1px 2px 0 rgba(0, 0, 0, 0.24);
 }
-@-webkit-keyframes spin {
-	from { -webkit-transform: rotate(0deg); }
-	to { -webkit-transform: rotate(360deg); }
+
+
+/* Antiguo examples.css
+*******************************************/
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
 }
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+
+/* Custom CSS
+ * --------------------------------------- */
+h1{
+	font-size: 6em;
+}
+p{
+	font-size: 2em;
+}
+
+.section{
+	text-align:center;
+}
+

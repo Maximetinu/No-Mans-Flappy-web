@@ -1,5 +1,5 @@
 /* -- import Roboto Font ---------------------------- */
-@import "https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic";
+/*@import "https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic";*/
 /* -- You can use this tables in Bootstrap (v3) projects. -- */
 /* -- Box model ------------------------------- */
 *,
@@ -25,7 +25,8 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  /*font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;*/
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 1.4rem;
@@ -37,7 +38,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
-#demo {
+/*#demo {
   margin: 20px auto;
   max-width: 960px;
 }
@@ -58,7 +59,7 @@ body {
   font-weight: 400;
   color: #212121;
   text-align: center;
-}
+}*/
 .shadow-z-1 {
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
@@ -93,7 +94,7 @@ body {
   transition: all 0.3s ease;
 }
 .table > thead > tr > th {
-  font-weight: 400;
+  font-weight: 500;
   color: #757575;
   vertical-align: bottom;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
@@ -175,7 +176,7 @@ body {
     content: attr(data-title);
     float: left;
     font-size: inherit;
-    font-weight: 400;
+    font-weight: 500;
     color: #757575;
   }
   .table-responsive-vertical.shadow-z-1 {
