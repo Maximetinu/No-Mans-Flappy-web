@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>No Man's Flappy</title>
+	<meta name="author" content="Maximetinu" />
+	<meta name="description" content="A project from limpopopó games" />
+	<meta name="keywords"  content="game,unity,maximetinu,videogame,chat,mmo,nomansflappy" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="css/loader-mobile.css" />
+	<link rel="stylesheet" type="text/css" href="css/mobile.css" />
+
+	<!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script-->
+        <script type="text/javascript" src="js/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/load-game-mobile.js"></script>
+
+    	<!--[if IE]>
+	        <script type="text/javascript">
+	             var console = { log: function() {} };
+	        </script>
+        <![endif]-->
+
+
+</head>
+<body>
+	<div id="loader-wrapper">
+    		<div id="loader"></div>
+	</div>
+	<div id="canvas-container" class="shadow-z-1">
+		<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+	</div>
+	<script type='text/javascript'>
+		var Module = {
+			TOTAL_MEMORY: 268435456,
+			errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+			compatibilitycheck: null,
+			backgroundColor: "#161616",
+			splashStyle: "Light",
+			dataUrl: "game/0.8.data",
+			codeUrl: "game/0.8.js",
+			asmUrl: "game/0.8.asm.js",
+			memUrl: "game/0.8.mem",
+		};
+	</script>
+        <script type="text/javascript" src="game/UnityLoader.js"></script>
+</body>
+</html>

@@ -7,14 +7,14 @@ function openModal(){
 	modal_open = true;
 	$.fn.fullpage.setMouseWheelScrolling(false);
     	$.fn.fullpage.setAllowScrolling(false);
-	$("#copyright-modal").fadeIn( 350, "swing");
+	$("#copyright-modal").fadeIn( 250, "swing");
 }
 function closeModal(){
 	$("a").removeClass('disable-anchor');
 	$("#fullpage").css('opacity',1);
 	$("#fp-nav").css("visibility","visible");
 	modal_open = false;
-	$("#copyright-modal").fadeOut( 350, "swing");
+	$("#copyright-modal").fadeOut( 250, "swing");
 	$.fn.fullpage.setMouseWheelScrolling(true);
     	$.fn.fullpage.setAllowScrolling(true);
 }

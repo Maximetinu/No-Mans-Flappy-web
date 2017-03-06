@@ -34,7 +34,6 @@ function doGameLoadedStuff(){
 	$.fn.fullpage.setMouseWheelScrolling(true);
     $.fn.fullpage.setAllowScrolling(true);
     load_finish = true;
-    console.log("CARGA TERMINADA. AL HACER FOCUS A PARTIR DE AHORA NO SE DEBERÍA SALTAR AL GAME");
     $("#loader-wrapper").fadeOut( 850, "swing", function() { $(this).remove(); });
     $("#fp-nav").css("visibility","visible");
         //if (current_hash != null && !has_recovery_focus){
