@@ -2,4 +2,4 @@
 Web for WebGL game made with Unity3D
 
 ## Instructions
-Only copy the repo to the www folder from any apache webserver (xampp, lampp...) and go to 'localhost' with any web browser
+Copy the repo to the www folder from any apache webserver (xampp, lampp...) and go to 'localhost' with any web browser
