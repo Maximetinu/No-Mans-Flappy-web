@@ -1,0 +1,3 @@
+<Files "*.php">
+    Allow from localhost
+</Files>

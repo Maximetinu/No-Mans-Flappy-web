@@ -1,0 +1,21 @@
+# BEGIN GZIP
+<ifmodule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+</ifmodule>
+# END GZIP
+
+Options -Indexes
+
+<Files "*.php">
+    Deny from all
+    Allow from localhost
+</Files>
+
+<Files "index.php">
+    Allow from all
+</Files>
+
+DirectoryIndex index.php
+
+RewriteCond %{THE_REQUEST} ^.*/index\.php 
+RewriteRule ^(.*)index.php$ /$1 [R=301,L] 

@@ -10,7 +10,7 @@ class DBManager{
     private $host = "localhost";
     private $username = "root";
     private $password = "";
-    private $dbname = "nomansflappy";
+    private $dbname = "NoMansFlappy";
 
     // USERS TABLE User(username, highscore_a, highscore_b, is_active, IP)
 
@@ -81,7 +81,7 @@ class DBManager{
     // Llamada para inicializar el marco de trabajo con la lista de usuarios
     public function ChargeUserList(){
         $this->userList = array();
-        $query = "SELECT username, highscore_a, highscore_b, is_active FROM Users";
+        $query = "SELECT username, highscore_a, highscore_b, is_active FROM Users ORDER BY is_active DESC, highscore_a DESC";
         if ($result = $this->mysqli->query($query)) { 
            $cont = 1;
             while($fila = $result->fetch_row()){
@@ -185,15 +185,27 @@ class DBManager{
         return $this->game->sizeOfTheArmy;
     }
 
+    private function get_user_active_list(){
+        $active_users = array();
+
+        for($i=0;$i<=sizeof($this->userList);$i++)
+            if($this->userList[$i]->is_active)
+                array_push($active_users,$this->userList[$i]);
+
+        return $active_users;
+    }
+
     private function sum_highscore_a_of_army(){
         $sum = 0;
 
+        $users = $this->get_user_active_list();
+
         $limit = $this->game->sizeOfTheArmy;
-        if ($limit > sizeof($this->userList))
-            $limit = sizeof($this->userList);
+        if ($limit > sizeof($users))
+            $limit = sizeof($users);
 
         for ($i = 0; $i<$limit; $i++)
-            $sum += $this->userList[$i]->score_A;
+            $sum += $users[$i]->score_A;
         return $sum;
     }
 

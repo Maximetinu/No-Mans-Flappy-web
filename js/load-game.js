@@ -1,5 +1,5 @@
 $(window).load(function(){
-	if (window.location.hash != "#ranking" && window.location.hash != "#how-to" && window.location.hash != "#chat" && window.location.hash != "#footer")
+	if (window.location.hash != "#ranking" && window.location.hash != "#whatswhat" && window.location.hash != "#footer")
 		chargeLoader();
 	$(window).bind('hashchange', function() {
      if(window.location.hash == "#game"){

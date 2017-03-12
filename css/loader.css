@@ -74,3 +74,8 @@
         transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
     }
 }
+
+#loader-wrapper span{
+    font-size: 18px;
+    color: white;
+}
