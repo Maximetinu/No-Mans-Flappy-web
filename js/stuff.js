@@ -2,7 +2,7 @@ function showEmail(){
 	$('#contact').text('maximetinu@gmail.com');
 }
 
-function getSummary()
+function getRankingAjax()
 {
    $.ajax({
 
@@ -14,3 +14,22 @@ function getSummary()
 
    });
 }
+
+function getBRankingAjax()
+{
+   // $.ajax({
+
+   //   type: "GET",
+   //   url: 'php/branking-ajax.php',
+   //   success: function(data) {
+   //        $('#table-b').html(data);
+   //   }
+
+   // });
+}
+
+// document.addEventListener('visibilitychange', function(){
+//     if (!document.hidden)
+//         getRankingAjax();
+// }
+// })

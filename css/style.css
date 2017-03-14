@@ -72,7 +72,7 @@ div#canvas-container{
 	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.55);*/
 }
 
-#section2{
+#section4{
 	-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.55);
 	-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.55);
 	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.55);
@@ -96,11 +96,25 @@ div#canvas-container{
 	background-color: #FFEE58;
 }
 
+#section2{
+	background-color: #FF8A65;
+}
+
 .section{
 	text-align:center;
 }
 
-#ranking-table{
+.b-ranking{
+	font-size: 1.2em;
+	font-weight: 500;
+	padding: 20px;
+}
+
+.b-ranking-table{
+	padding-top: 15px;
+}
+
+.ranking-table{
 	height:80vh; 
 	overflow:auto;
 	width: 50%;
@@ -110,15 +124,15 @@ div#canvas-container{
 	background-color: white;
 }
 
-#ranking-table .table{
+.ranking-table .table{
 	margin-bottom: 0 !important;
 }
 
-#ranking-table td:first-child + td + td{
+.ranking-table td:first-child + td + td{
 	width: 8em;
 }
 
-#ranking-table td:first-child{
+.ranking-table td:first-child{
 	margin-left: 20px;
 }
 
@@ -184,7 +198,7 @@ caption {
   width: 300px;
 }*/
 
-#section2{
+#section3{
 	background-color: #64B5F6;
 	/*padding: 10vh;*/
 }

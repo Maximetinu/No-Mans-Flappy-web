@@ -10,7 +10,7 @@ class DBManager{
     private $host = "localhost";
     private $username = "root";
     private $password = "";
-    private $dbname = "NoMansFlappy";
+    private $dbname = "nomansflappy";
 
     // USERS TABLE User(username, highscore_a, highscore_b, is_active, IP)
 

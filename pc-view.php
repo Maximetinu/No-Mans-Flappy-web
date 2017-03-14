@@ -59,18 +59,22 @@
         	$(document).ready(function() {
         		$('#fullpage').fullpage({
         			verticalCentered: true,
-              			anchors: ['game', 'ranking', 'whatswhat','footer'],
+              			anchors: ['game', 'ranking', 'b-ranking', 'whatswhat','footer'],
 		        	menu: '#menu',
 		        	normalScrollElements: '.scrollable-element',
 		        	navigation: true,
-		        	navigationTooltips: ['Game', 'Ranking', 'What&#39;s what'],
+		        	navigationTooltips: ['Game', 'Ranking', 'B Ranking', 'What&#39;s what'],
 		        	onLeave: function(index, nextIndex, direction){
 			            	var leavingSection = $(this);
 
 			            	//después de abandonar la sección 1
-			            	if(index == 1 && direction =='down'){
-			                	getSummary();
-			            	}		
+			            	if(nextIndex == 2){
+			                	getRankingAjax();
+			            	}
+			            	if(nextIndex == 3){
+			                	getBRankingAjax();
+			            	}
+
 			        }
           		});
         	$.fn.fullpage.setKeyboardScrolling(false);
@@ -97,16 +101,21 @@
 			?>
 		</div>
 		<div class="section" id="section2">
+			<?php
+				include "php/branking.php";
+			?>
+		</div>
+		<div class="section" id="section3">
 			<div class="circles-line">
 				<div id="pvp" tooltip="In order to defeat someone in the ranking, just upload a score higher than his and then delete the game data from the settings menu to disable the entry on the ranking" flow="left" class="circle left shadow-z-1 "></div>
 				<div id="pve" tooltip="There is a score that all of you must work together to reach, by adding up your highscores. After that, endgame content will be unlocked" flow="right" class="circle right shadow-z-1"></div>
 			</div>
 			<div class="circles-line">
-				<div id="guilds" tooltip="There is a way to form a guild. All the guild's members only have to use the same name while playing. The one with the highest score will be the guild master. Only the master can delete the guild, by deleting his game data from the settings menu" flow="left" class="circle left shadow-z-1"></div>
+				<div id="guilds" tooltip="There is a way to form a guild. All the guild's members only have to use the same name while playing, which is the guild name. The one with the highest score will be the guild master. Only the master can delete the guild, by deleting his game data from the settings menu" flow="left" class="circle left shadow-z-1"></div>
 				<div id="leagues" tooltip="Leagues are planned for summer 2017, as long as the endgame had been reached" flow="right" class="circle right shadow-z-1"></div>
 			</div>
 		</div>
-		<div class="section fp-auto-height" id="section3">
+		<div class="section fp-auto-height" id="section4">
 			<div class="site-footer">
 				<p class="site-logo"><!--a href="http://www.maximetinu.com/">No Man's Flappy</a--></p> 
 				<!--p class="powered">Powered by Maximetinu</p-->
@@ -120,11 +129,11 @@
 					 </span>
 				 </p>
 				<p class="social-links">
-					<a href="http://www.facebook.com/maximetinu">Facebook</a>
+					<a href="http://www.facebook.com/maximetinu" target="_blank">Facebook</a>
 					<span class="line"> — </span>
-					<a href="http://twitter.com/maximetinu">Twitter</a>
+					<a href="http://twitter.com/maximetinu" target="_blank">Twitter</a>
 					<span class="line"> — </span>
-					<a href="http://lanaciondelcosmopolita.tumblr.com/">Tumblr</a>
+					<a href="http://lanaciondelcosmopolita.tumblr.com/" target="_blank">Tumblr</a>
 				</p>
 			</div>
 		</div>
@@ -140,9 +149,9 @@
 			<p>No permission is needed to copy, distribute, or modify any content on this game or site. Credit is appreciated but not required. Do what feels right, but don’t do anything out of obligation. It’s all good.</p>
 			<p>So if you like anything you see, be creative and make something awesome.</p>
 			<p class="github-links">
-				<a class="enable-anchor" href="https://github.com/Maximetinu/No-Mans-Flappy-Unity">game repo</a>
+				<a class="enable-anchor" target="_blank" href="https://github.com/Maximetinu/No-Mans-Flappy-Unity">game repo</a>
 				<span class="line"> — </span>
-				<a class="enable-anchor" href="https://github.com/Maximetinu/No-Mans-Flappy-web">website repo</a>
+				<a class="enable-anchor" target="_blank" href="https://github.com/Maximetinu/No-Mans-Flappy-web">website repo</a>
 			</p>
 			<p>— Metinu</p>
 		</div>
@@ -154,14 +163,4 @@
 		</div>
 	</div>
 	</body>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', '***GOOGLE ANALYTICS UA***', 'auto');
-	  ga('send', 'pageview');
-
-	</script>
 </html>

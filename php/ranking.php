@@ -3,7 +3,7 @@
 	$db = new DBManager();
 	$db->ChargeUserList();
 ?>
-<div id="ranking-table" class="scrollable-element table-responsive-vertical shadow-z-1">
+<div id="ranking-table" class="ranking-table scrollable-element table-responsive-vertical shadow-z-1">
 	<!-- Table starts here -->
 	<table id="table" class="table table-mc-light-blue">
 		<caption id="community-score-caption"
