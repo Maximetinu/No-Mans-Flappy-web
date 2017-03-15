@@ -1,7 +1,7 @@
 <?php 
 	include_once "class.DBManager.php";
 	$db = new DBManager();
-	$db->ChargeUserList();
+	$db->ChargeUserList(false);
 ?>
 
 <div class="b-ranking-table ranking-table scrollable-element table-responsive-vertical shadow-z-1">
@@ -14,7 +14,7 @@
 				<th>Score</th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody id="ranking-body">
 			<?php
 				for($i=1;$i<=sizeof($db->GetUserList(false)) && $i<=$db->GetSizeOfTheArmy();$i++){
 					echo "<tr";

@@ -111,7 +111,7 @@
 				<div id="pve" tooltip="There is a score that all of you must work together to reach, by adding up your highscores. After that, endgame content will be unlocked" flow="right" class="circle right shadow-z-1"></div>
 			</div>
 			<div class="circles-line">
-				<div id="guilds" tooltip="There is a way to form a guild. All the guild's members only have to use the same name while playing, which is the guild name. The one with the highest score will be the guild master. Only the master can delete the guild, by deleting his game data from the settings menu" flow="left" class="circle left shadow-z-1"></div>
+				<div id="guilds" tooltip="There is a way to form a guild. All the guild members only have to use the same name while playing, which is the guild name. The one with the highest score will be the guild master. Only the master can delete the guild, by deleting his game data from the settings menu" flow="left" class="circle left shadow-z-1"></div>
 				<div id="leagues" tooltip="Leagues are planned for summer 2017, as long as the endgame had been reached" flow="right" class="circle right shadow-z-1"></div>
 			</div>
 		</div>
@@ -163,4 +163,14 @@
 		</div>
 	</div>
 	</body>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', '*** GOOGLE ANALYTICS UA***', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 </html>

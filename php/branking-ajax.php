@@ -1,9 +1,9 @@
 <?php
 	include_once "class.DBManager.php";
 	$db = new DBManager();
-	$db->ChargeUserList();
+	$db->ChargeUserList(false);
 ?>
-<span class="b-ranking">Gamemode B Ranking</span>
+<!--span class="b-ranking">Gamemode B Ranking</span-->
 <thead>
 	<tr>
 		<th>Position</th>

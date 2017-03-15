@@ -1,5 +1,5 @@
 function showEmail(){
-	$('#contact').text('maximetinu@gmail.com');
+	$('#contact').text('maximetinu at gmail dot com');
 }
 
 function getRankingAjax()
@@ -17,15 +17,15 @@ function getRankingAjax()
 
 function getBRankingAjax()
 {
-   // $.ajax({
+   $.ajax({
 
-   //   type: "GET",
-   //   url: 'php/branking-ajax.php',
-   //   success: function(data) {
-   //        $('#table-b').html(data);
-   //   }
+     type: "GET",
+     url: 'php/branking-ajax.php',
+     success: function(data) {
+          $('#table-b').html(data);
+     }
 
-   // });
+   });
 }
 
 // document.addEventListener('visibilitychange', function(){

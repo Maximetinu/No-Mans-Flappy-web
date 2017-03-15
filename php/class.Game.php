@@ -1,8 +1,8 @@
 <?php
 class Game{
 	public $hashKey = "MiLlaveSecreta";
-	public $communityTarget = 500;
-	public $individualLimit = 5;
+	public $communityTarget = 117;
+	public $individualLimit = 0;
 	public $sizeOfTheArmy = 500;
 
 	public $jump = 12.8;

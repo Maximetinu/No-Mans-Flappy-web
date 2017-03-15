@@ -79,9 +79,11 @@ class DBManager{
 	}
 
     // Llamada para inicializar el marco de trabajo con la lista de usuarios
-    public function ChargeUserList(){
+    public function ChargeUserList($a_mode = true){
         $this->userList = array();
         $query = "SELECT username, highscore_a, highscore_b, is_active FROM Users ORDER BY is_active DESC, highscore_a DESC";
+        if (!$a_mode)
+            $query = "SELECT username, highscore_a, highscore_b, is_active FROM Users ORDER BY is_active DESC, highscore_b DESC";
         if ($result = $this->mysqli->query($query)) { 
            $cont = 1;
             while($fila = $result->fetch_row()){

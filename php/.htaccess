@@ -1,3 +1,6 @@
 <Files "ranking-ajax.php">
     Allow from all
 </Files>
+<Files "branking-ajax.php">
+    Allow from all
+</Files>
