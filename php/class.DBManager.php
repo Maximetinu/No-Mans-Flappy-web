@@ -2,11 +2,11 @@
 include "class.Game.php";
 include "class.User.php";
 class DBManager{
-	private $userList;
-	private $game;
-	private $mysqli;
+    private $userList;
+    private $game;
+    private $mysqli;
 
-	/* WWW CONFIG */
+    /* WWW CONFIG */
     private $host = "localhost";
     private $username = "root";
     private $password = "";
@@ -14,23 +14,23 @@ class DBManager{
 
     // USERS TABLE User(username, highscore_a, highscore_b, is_active, IP)
 
-	public function __construct(){
-		$this->OpenConnection();
-		$this->userList = null;
-		$this->game = new Game();
-	}
+    public function __construct(){
+	$this->OpenConnection();
+	$this->userList = null;
+	$this->game = new Game();
+    }
 
-	public function __destruct(){
-		$this->CloseConnection();
-	}
+    public function __destruct(){
+	$this->CloseConnection();
+    }
 
-	/* --- Connections Functions --- */
+    /* --- Connections Functions --- */
 
-	private function OpenConnection(){
+    private function OpenConnection(){
         $this->mysqli = new mysqli($this->host, $this->username, $this->password, $this->dbname);
-		if ($this->mysqli->connect_errno) {
-    		exit("Fallo al conectar a MySQL: (" . $this->mysqli->connect_errno . ") " . $this->mysqli->connect_error);
-		}
+	if ($this->mysqli->connect_errno) {
+    	    exit("Fallo al conectar a MySQL: (" . $this->mysqli->connect_errno . ") " . $this->mysqli->connect_error);
+	}
     }
 
     private function CloseConnection(){
@@ -71,12 +71,12 @@ class DBManager{
     	$array = array_slice($array, $left, count($array) - $left);
     	$array = array_slice($array, 0, count($array) - $right);
     	return $array;
-	}
+    }
 
-	private function check_userList(){
-		if ($this->userList == null)
-			exit("Fallo: lista de usuarios vacía"); // COMPORTAMIENTO PREDETERMINADO
-	}
+    private function check_userList(){
+	if ($this->userList == null)
+            exit("Fallo: lista de usuarios vacía"); // COMPORTAMIENTO PREDETERMINADO
+    }
 
     // Llamada para inicializar el marco de trabajo con la lista de usuarios
     public function ChargeUserList($a_mode = true){
@@ -91,20 +91,20 @@ class DBManager{
                 $cont++;
             }
         }
-
     }
 
     /* ---- ---- ---- ---- ---- ---- */
 
     /* --- Enable / Disable User --- */
 
-    // public function EnableUser($name){
-    // 	$user = $this->FindUserByName($name);
-    //     $query = "MODIFICAR (is_enable) = true WHERE USER(name) == $name";
-    //     if (!($this->mysqli->query($query))) { 
-    //        exit("Fallo al activar usuario");
-    //     }
-    // }
+     // Never used
+     public function EnableUser($name){
+     	$user = $this->FindUserByName($name);
+         $query = "MODIFICAR (is_enable) = true WHERE USER(name) == $name";
+         if (!($this->mysqli->query($query))) { 
+            exit("Fallo al activar usuario");
+         }
+     }
 
     // Script: set-highscores-inactives.php
     public function DisableUser($name){
