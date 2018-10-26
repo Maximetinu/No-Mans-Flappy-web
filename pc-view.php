@@ -112,7 +112,7 @@
 			</div>
 			<div class="circles-line">
 				<div id="guilds" tooltip="There is a way to form a guild. All the guild members only have to use the same name while playing, which is the guild name. The one with the highest score will be the guild master. Only the master can delete the guild, by deleting his game data from the settings menu" flow="left" class="circle left shadow-z-1"></div>
-				<div id="leagues" tooltip="Leagues are planned for summer 2017, as long as the endgame had been reached" flow="right" class="circle right shadow-z-1"></div>
+				<div id="leagues" tooltip="Leagues are planned for 2020, as long as the endgame had been reached" flow="right" class="circle right shadow-z-1"></div>
 			</div>
 		</div>
 		<div class="section fp-auto-height" id="section4">
